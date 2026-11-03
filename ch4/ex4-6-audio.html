@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4-6 오디오</title>
+</head>
+<body>
+    <h2>audio 태그</h2>
+    <audio src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" controls>
+        이 브라우저는 audio 태그를 지원하지 않습니다.
+    </audio>
+
+    <h2>source로 여러 형식 제공 + 반복 재생</h2>
+    <audio controls loop>
+        <!-- 브라우저가 재생할 수 있는 첫 번째 파일을 사용한다 -->
+        <source src="media/sound.ogg" type="audio/ogg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2>주요 속성</h2>
+    <ul>
+        <li><b>controls</b> : 재생·정지 버튼 표시</li>
+        <li><b>autoplay</b> : 자동 재생 (대부분 브라우저가 소리 있는 자동 재생을 막음)</li>
+        <li><b>loop</b> : 반복 재생</li>
+        <li><b>muted</b> : 음소거</li>
+        <li><b>preload</b> : 미리 불러오기 (auto / metadata / none)</li>
+    </ul>
+    <p><small>사운드 출처: MDN 예제 (CC0)</small></p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex4-6-audio.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap4multi.html">← 4장 목록</a></memo-bar>
+</body>
+</html>

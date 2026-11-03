@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+=========================================
+CSS overflow 핵심 요약
+=========================================
+
+■ overflow
+- 요소의 크기를 넘는 콘텐츠 처리 방식 설정
+- 주로 블록(Block) 요소에 적용
+- overflow-x, overflow-y로 방향별 설정 가능
+
+■ 속성값
+- visible : 기본값, 넘친 내용 모두 표시
+- hidden  : 넘친 내용 숨김
+- scroll  : 항상 스크롤바 표시
+- auto    : 내용이 넘칠 때만 스크롤바 표시
+
+※ 핵심
+- visible : 그대로 표시
+- hidden  : 숨김
+- scroll  : 항상 스크롤
+- auto    : 필요할 때만 스크롤
+-->
+<html>
+<head>
+  <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/memo.css">
+  <title>예제 6-11 Overflow</title>
+  <style>
+    /* 모든 div 공통 스타일 */
+    div {
+      width: 70%;                 /* div 너비 70% */
+      height: 50px;               /* div 높이 50px */
+      margin-bottom: 20px;        /* 아래쪽 여백 */
+      padding: 5px;               /* 내부 여백 */
+      color: white;               /* 글자색 흰색 */
+      font-size: 14px;            /* 글자 크기 */
+      line-height: 1.2em;         /* 줄 간격 */
+      overflow-wrap: break-word;  /* 긴 단어 줄바꿈 처리 */
+    }
+
+    /* overflow: visible → 넘친 내용도 표시 */
+    #vis {
+      overflow: visible;
+      background: red;            /* 배경색 빨강 */
+    }
+
+    /* overflow: hidden → 넘친 내용 잘림 */
+    #hid {
+      overflow: hidden;
+      background: blue;           /* 배경색 파랑 */
+    }
+
+    /* overflow: scroll → 항상 스크롤바 표시 */
+    #scr {
+      overflow: scroll;
+      background: cyan;           /* 배경색 하늘색 */
+      color: black;               /* 글자색 검정 */
+    }
+
+    /* overflow: auto → 넘칠 때만 스크롤바 표시 */
+    #aut {
+      overflow: auto;
+      background: orange;         /* 배경색 주황 */
+    }
+  </style>
+</head>
+<body>
+  <h3>Overflow 속성</h3>
+
+  <!-- hidden 예시: 넘친 내용이 잘려서 보이지 않음 -->
+  <div id="hid">
+    • visible : 기본 설정 속성으로 박스의 크기를 벗어난 내용이 잘리지 않고 표시된다.<br>
+    • hidden : 넘친 내용은 보이지 않도록 잘린다. 스크롤바가 나타나지 않고 숨겨진다.
+  </div>
+
+  <!-- scroll 예시: 항상 스크롤바가 표시됨 -->
+  <div id="scr">
+    • scroll : 넘친 내용이 있으면 스크롤바가 항상 표시되어 사용자가 스크롤을 통해 내용을 볼 수 있다.<br>
+    • auto : 내용이 넘칠 때만 스크롤바가 표시된다.
+  </div>
+
+  <!-- auto 예시: 넘칠 때만 스크롤바 표시 -->
+  <div id="aut">
+    • visible : 넘친 내용이 잘리지 않고 표시된다.<br>
+    • scroll : 넘친 내용이 있으면 스크롤바가 항상 표시된다.<br>
+    • auto : 내용이 넘칠 때만 스크롤바가 표시된다.
+  </div>
+
+  <!-- visible 예시: 넘친 내용도 그대로 표시 -->
+  <div id="vis">
+    • visible : 넘친 내용이 잘리지 않고 표시된다.<br>
+    • hidden : 넘친 내용은 잘려서 보이지 않는다.<br>
+    • scroll : 항상 스크롤바가 표시된다.<br>
+    • auto : 넘칠 때만 스크롤바가 표시된다.
+  </div>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">예제6-11overflow.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap6Dsgn.html">← 6장 목록</a></memo-bar>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

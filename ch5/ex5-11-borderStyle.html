@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 5-11 경계선 스타일</title>
+    <style>
+        p { padding: 10px; margin: 12px 0; border-width: 4px; border-color: #2c3e50; }
+        .solid  { border-style: solid; }
+        .dashed { border-style: dashed; }
+        .dotted { border-style: dotted; }
+        .double { border-style: double; border-width: 6px; }
+        .groove { border-style: groove; border-width: 8px; border-color: #aaa; }
+        .ridge  { border-style: ridge; border-width: 8px; border-color: #aaa; }
+        .inset  { border-style: inset; border-width: 8px; border-color: #aaa; }
+        .outset { border-style: outset; border-width: 8px; border-color: #aaa; }
+        .none   { border-style: none; background: #f4f4f4; }
+        /* 단축 속성 : 두께 스타일 색상 */
+        .short  { border: 3px solid crimson; }
+    </style>
+</head>
+<body>
+    <h2>border-style</h2>
+    <p class="solid">solid : 실선</p>
+    <p class="dashed">dashed : 파선</p>
+    <p class="dotted">dotted : 점선</p>
+    <p class="double">double : 이중선</p>
+    <p class="groove">groove : 파인 선</p>
+    <p class="ridge">ridge : 튀어나온 선</p>
+    <p class="inset">inset : 안으로 들어간 상자</p>
+    <p class="outset">outset : 밖으로 나온 상자</p>
+    <p class="none">none : 선 없음</p>
+    <p class="short">border: 3px solid crimson (단축 속성)</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex5-11-borderStyle.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap5CSS.html">← 5장 목록</a></memo-bar>
+</body>
+</html>

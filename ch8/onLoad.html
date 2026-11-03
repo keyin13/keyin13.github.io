@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <title>onload 예제 1</title>
+    <script>
+        function initPage() {
+            alert("페이지의 모든 리소스가 완전히 로드되었습니다!");
+        }
+    </script>
+</head>
+<body onload="initPage()">
+    <h1>웹 페이지에 오신 것을 환영합니다</h1>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">onLoad.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap8javascript.html">← 8장 목록</a></memo-bar>
+</body>
+</html>

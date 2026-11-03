@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4-2 라디오와 체크박스</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>성별 (하나만 선택 : radio)</legend>
+            <!-- 같은 name을 가진 radio끼리 하나만 선택된다 -->
+            <label><input type="radio" name="gender" value="m" checked> 남</label>
+            <label><input type="radio" name="gender" value="f"> 여</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>관심 분야 (여러 개 선택 : checkbox)</legend>
+            <label><input type="checkbox" name="hobby" value="html" checked> HTML</label>
+            <label><input type="checkbox" name="hobby" value="css"> CSS</label>
+            <label><input type="checkbox" name="hobby" value="js"> JavaScript</label>
+            <label><input type="checkbox" name="hobby" value="db" disabled> 데이터베이스(준비 중)</label>
+        </fieldset>
+
+        <p><input type="submit" value="제출"></p>
+    </form>
+    <p>label로 감싸면 글자를 눌러도 선택됩니다.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex4-2-radioCheck.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap4multi.html">← 4장 목록</a></memo-bar>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* 예제 페이지 공통: 메모장 테마
+   :where()로 우선순위를 0으로 만들어서 각 예제의 CSS가 항상 이기도록 함 */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Gowun+Dodum&display=swap');
+
+:where(html) { background-color: #fffef8; }
+
+:where(body) {
+    margin: 0;
+    padding: 28px 32px 70px 76px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Gowun Dodum', 'Malgun Gothic', sans-serif;
+    line-height: 1.7;
+    color: #2b2b35;
+    background-color: #fffef8;
+    /* 빨간 여백선 + 줄 노트 */
+    background-image:
+        linear-gradient(90deg, transparent 54px, rgba(229, 115, 115, 0.7) 54px, rgba(229, 115, 115, 0.7) 56px, transparent 56px),
+        repeating-linear-gradient(transparent 0 31px, rgba(70, 110, 170, 0.16) 31px 32px);
+    background-attachment: local;
+}
+
+/* 하단 메모장 상태 표시줄 (예제 CSS의 영향을 받지 않도록 초기화) */
+#memo-bar, #memo-bar * { all: revert; box-sizing: border-box; }
+
+#memo-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 40px;
+    margin: 0;
+    padding: 0 18px;
+    background-color: #fdf6d8;
+    border-top: 2px dashed rgba(43, 43, 53, 0.25);
+    box-shadow: 0 -4px 12px rgba(43, 43, 53, 0.08);
+    font: 14px/1 'Gowun Dodum', 'Malgun Gothic', sans-serif;
+    color: #5a5a68;
+}
+
+#memo-bar .mb-app { font-family: 'Gaegu', cursive; font-size: 19px; font-weight: 700; color: #2b2b35; }
+#memo-bar .mb-file { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Consolas, monospace; font-size: 13px; }
+#memo-bar .mb-info { font-family: Consolas, monospace; font-size: 12px; color: #9a9aa5; }
+
+#memo-bar .mb-back {
+    padding: 5px 12px;
+    border: 2px solid #2b2b35;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 3px 3px 0 #ffe66d;
+    color: #2b2b35;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#memo-bar .mb-back:hover { background-color: #ffe66d; }
+
+@media (max-width: 500px) {
+    :where(body) { padding: 20px 14px 64px 40px; background-image:
+        linear-gradient(90deg, transparent 28px, rgba(229, 115, 115, 0.7) 28px, rgba(229, 115, 115, 0.7) 30px, transparent 30px),
+        repeating-linear-gradient(transparent 0 31px, rgba(70, 110, 170, 0.16) 31px 32px); }
+    #memo-bar .mb-info { display: none; }
+}

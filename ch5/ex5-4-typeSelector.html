@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 5-4 타입 선택자</title>
+    <style>
+        /* 전체 선택자 */
+        * { font-family: 'Malgun Gothic', sans-serif; }
+
+        /* 타입(태그) 선택자 */
+        h1 { color: navy; }
+        p { color: gray; }
+        li { color: purple; }
+
+        /* 그룹 선택자 : 쉼표로 여러 선택자에 같은 스타일 */
+        h2, h3 { background-color: lightyellow; }
+    </style>
+</head>
+<body>
+    <h1>h1은 남색</h1>
+    <h2>h2와 h3는 배경이 노란색</h2>
+    <h3>그룹 선택자</h3>
+    <p>모든 p 태그는 회색입니다.</p>
+    <p>이 문단도 회색입니다.</p>
+    <ul>
+        <li>모든 li는 보라색</li>
+        <li>두 번째 항목</li>
+    </ul>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex5-4-typeSelector.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap5CSS.html">← 5장 목록</a></memo-bar>
+</body>
+</html>

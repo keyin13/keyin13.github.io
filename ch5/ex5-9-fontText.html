@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 5-9 폰트와 텍스트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        .f1 { font-family: 'Malgun Gothic', sans-serif; }
+        .f2 { font-family: 'Batang', serif; }
+        .f3 { font-family: 'Nanum Pen Script', cursive; font-size: 28px; }
+        .size { font-size: 24px; }
+        .em { font-size: 1.5em; }
+        .bold { font-weight: 700; }
+        .italic { font-style: italic; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .under { text-decoration: underline wavy red; }
+        .upper { text-transform: uppercase; }
+        .indent { text-indent: 2em; }
+        .spacing { letter-spacing: 6px; word-spacing: 12px; }
+        .lh { line-height: 2.2; background: #f4f4f4; }
+        .short { font: italic bold 20px/1.5 Georgia, serif; }
+    </style>
+</head>
+<body>
+    <h2>font 속성</h2>
+    <p class="f1">font-family : 맑은 고딕 (sans-serif)</p>
+    <p class="f2">font-family : 바탕 (serif)</p>
+    <p class="f3">font-family : 구글 웹폰트 Nanum Pen Script</p>
+    <p class="size">font-size : 24px</p>
+    <p class="em">font-size : 1.5em (부모 글자의 1.5배)</p>
+    <p class="bold">font-weight : 700 (굵게)</p>
+    <p class="italic">font-style : italic</p>
+    <p class="short">font 단축 속성 : italic bold 20px/1.5 Georgia</p>
+
+    <h2>text 속성</h2>
+    <p class="center">text-align : center</p>
+    <p class="right">text-align : right</p>
+    <p class="under">text-decoration : underline wavy red</p>
+    <p class="upper">text-transform : uppercase &rarr; hello css</p>
+    <p class="indent">text-indent : 2em. 문단의 첫 줄을 들여 씁니다. 긴 문장을 넣어 여러 줄이 되도록 해 보면 첫 줄만 들여쓰기 된다는 것을 확인할 수 있습니다.</p>
+    <p class="spacing">letter-spacing 과 word-spacing</p>
+    <p class="lh">line-height : 2.2. 줄 간격을 넓히면 읽기 편해집니다. 여러 줄이 되도록 조금 더 긴 문장을 적어 줄 간격 차이를 확인해 보세요.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex5-9-fontText.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap5CSS.html">← 5장 목록</a></memo-bar>
+</body>
+</html>

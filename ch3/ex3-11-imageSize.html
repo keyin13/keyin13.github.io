@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 3-11 이미지 크기</title>
+</head>
+<body>
+    <h2>원래 크기 (400 x 300)</h2>
+    <img src="../images/sample.svg" alt="원본">
+
+    <h2>width만 지정 : 비율 유지</h2>
+    <img src="../images/sample.svg" alt="너비 200" width="200">
+
+    <h2>width와 height 모두 지정 : 비율이 깨질 수 있음</h2>
+    <img src="../images/sample.svg" alt="찌그러진 이미지" width="300" height="100" style="object-fit: fill;">
+
+    <h2>여러 크기 나란히</h2>
+    <img src="../images/sample.svg" alt="작게" width="80">
+    <img src="../images/sample.svg" alt="중간" width="140">
+    <img src="../images/sample.svg" alt="크게" width="200">
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex3-11-imageSize.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap3html.html">← 3장 목록</a></memo-bar>
+</body>
+</html>

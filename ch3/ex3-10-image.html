@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 3-10 이미지 삽입</title>
+</head>
+<body>
+    <h2>img 태그</h2>
+    <img src="../images/sample.svg" alt="산과 해가 있는 풍경" title="마우스를 올리면 보이는 설명">
+
+    <h2>이미지를 찾지 못한 경우</h2>
+    <p>파일 경로가 틀리면 alt에 적은 대체 텍스트가 대신 표시됩니다.</p>
+    <img src="../images/none.png" alt="이미지가 없습니다">
+
+    <h2>주요 속성</h2>
+    <ul>
+        <li><b>src</b> : 이미지 파일 경로 (필수)</li>
+        <li><b>alt</b> : 대체 텍스트 (시각장애인용 화면 낭독, 이미지 오류 시 표시)</li>
+        <li><b>title</b> : 마우스를 올렸을 때 보이는 툴팁</li>
+        <li><b>loading="lazy"</b> : 화면에 보일 때 불러오기</li>
+    </ul>
+    <p>상대 경로 <code>../images/sample.svg</code>는 "상위 폴더의 images 폴더 안"이라는 뜻입니다.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex3-10-image.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap3html.html">← 3장 목록</a></memo-bar>
+</body>
+</html>

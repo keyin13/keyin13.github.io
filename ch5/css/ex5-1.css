@@ -1,0 +1,15 @@
+/* 예제 5-1에서 link 태그로 불러오는 외부 스타일시트 */
+body {
+    background-color: #fdf6e3;
+    font-family: 'Malgun Gothic', sans-serif;
+}
+
+h1 {
+    color: #268bd2;
+    border-bottom: 3px solid #268bd2;
+}
+
+p {
+    color: #586e75;
+    font-size: 18px;
+}

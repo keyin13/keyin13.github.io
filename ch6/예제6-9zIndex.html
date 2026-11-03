@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+=========================================
+CSS z-index 핵심 요약
+=========================================
+
+■ z-index
+- 요소가 겹칠 때 앞뒤(쌓임 순서) 결정
+- 값이 클수록 앞(위), 작을수록 뒤(아래)
+
+■ 사용 조건
+- position: relative | absolute | fixed | sticky 에서만 적용
+- position: static 에서는 적용되지 않음
+
+■ 우선순위
+- 큰 값  → 앞쪽(위)
+- 작은 값 → 뒤쪽(아래)
+- 같은 값 → HTML 작성 순서가 늦은 요소가 위에 표시
+
+※ 핵심
+- position + z-index를 함께 사용해야 함
+- z-index 값이 클수록 화면 앞에 표시
+-->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/memo.css">
+  <title>예제 6-9 z-Index</title>
+  <style>
+    /* body 기본 스타일 */
+    body {
+      position: relative;   /* 내부 요소의 absolute 위치 기준점 */
+      height: 200px;        /* 전체 높이 */
+      padding: 20px;        /* 내부 여백 */
+      font-family: sans-serif; /* 글꼴 */
+    }
+
+    /* 첫 번째 박스: z-index 20 (가장 위에 표시됨) */
+    #box1 {
+      position: absolute;   /* 절대 위치 지정 */
+      top: 0;               /* 위쪽 0px */
+      left: 0;              /* 왼쪽 0px */
+      width: 150px;         /* 너비 */
+      height: 50px;         /* 높이 */
+      background: red;      /* 배경색 빨강 */
+      color: white;         /* 글자색 흰색 */
+      z-index: 20;          /* 가장 높은 레이어 */
+      line-height: 50px;    /* 텍스트 수직 가운데 정렬 */
+      text-align: center;   /* 텍스트 가로 가운데 정렬 */
+    }
+
+    /* 두 번째 박스: z-index 10 (중간 레이어) */
+    #box2 {
+      position: absolute;
+      top: 30px;            /* 위쪽 30px */
+      left: 30px;           /* 왼쪽 30px */
+      width: 150px;
+      height: 50px;
+      background: blue;     /* 배경색 파랑 */
+      color: white;
+      z-index: 10;          /* 중간 레이어 */
+      line-height: 50px;
+      text-align: center;
+    }
+
+    /* 세 번째 박스: z-index 0 (가장 아래 레이어) */
+    #box3 {
+      position: absolute;
+      top: 60px;            /* 위쪽 60px */
+      left: 60px;           /* 왼쪽 60px */
+      width: 150px;
+      height: 50px;
+      background: green;    /* 배경색 초록 */
+      color: white;
+      z-index: 0;           /* 가장 낮은 레이어 */
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- z-index가 가장 높은 박스 (위에 표시됨) -->
+  <div id="box1">Number #1 Z-index=20</div>
+
+  <!-- 중간 레이어 박스 -->
+  <div id="box2">Number #2 Z-index=10</div>
+
+  <!-- 가장 아래 레이어 박스 -->
+  <div id="box3">Number #3 Z-index=0</div>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">예제6-9zIndex.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap6Dsgn.html">← 6장 목록</a></memo-bar>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

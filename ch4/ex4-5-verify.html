@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4-5 입력 검증</title>
+    <style>
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input:invalid { border: 2px solid #e74c3c; }
+        input:valid { border: 2px solid #2ecc71; }
+    </style>
+</head>
+<body>
+    <h2>회원 가입 (브라우저 자동 검증)</h2>
+    <form action="#">
+        <label for="name">이름 (필수)</label>
+        <input id="name" type="text" required>
+
+        <label for="id">아이디 (영문·숫자 4~10자)</label>
+        <input id="id" type="text" pattern="[A-Za-z0-9]{4,10}" title="영문과 숫자 4~10자" required>
+
+        <label for="pw">비밀번호 (8자 이상)</label>
+        <input id="pw" type="password" minlength="8" required>
+
+        <label for="mail">이메일</label>
+        <input id="mail" type="email" required>
+
+        <label for="age">나이 (14 ~ 100)</label>
+        <input id="age" type="number" min="14" max="100">
+
+        <p><input type="submit" value="가입하기"></p>
+    </form>
+    <p>조건에 맞지 않으면 제출 시 브라우저가 경고 말풍선을 띄웁니다. 테두리 색으로 유효 여부를 확인할 수 있습니다.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex4-5-verify.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap4multi.html">← 4장 목록</a></memo-bar>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <title>onkeydown 엔터 키 감지 예제</title>
+</head>
+<body>
+    <h2>메시지 입력 (Enter 키를 누르세요)</h2>
+    
+    <!-- 키를 누를 때마다 checkEnter 함수 실행 -->
+    <input type="text" id="userInput" onkeydown="checkEnter(event)" placeholder="내용 입력 후 Enter">
+    
+    <p id="result"></p>
+
+    <script>
+        function checkEnter(event) {
+            // 누른 키의 이름(key) 또는 키 코드(keyCode) 확인
+            if (event.key === "Enter" || event.keyCode === 13) {
+                var text = document.getElementById("userInput").value;
+                document.getElementById("result").innerHTML = "입력한 값: <b>" + text + "</b>";
+            }
+        }
+    </script>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">onKeyDown.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap8javascript.html">← 8장 목록</a></memo-bar>
+</body>
+</html>

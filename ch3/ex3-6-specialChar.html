@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 3-6 특수 문자</title>
+</head>
+<body>
+    <h2>특수 문자 (문자 엔티티)</h2>
+    <p>HTML에서 &lt;와 &gt;는 태그를 만드는 기호라서 그대로 쓸 수 없습니다. 이럴 때 엔티티를 씁니다.</p>
+    <table border="1">
+        <tr><th>코드</th><th>결과</th><th>의미</th></tr>
+        <tr><td>&amp;nbsp;</td><td>[&nbsp;&nbsp;&nbsp;]</td><td>공백 (여러 칸 띄우기)</td></tr>
+        <tr><td>&amp;lt;</td><td>&lt;</td><td>작다 (less than)</td></tr>
+        <tr><td>&amp;gt;</td><td>&gt;</td><td>크다 (greater than)</td></tr>
+        <tr><td>&amp;amp;</td><td>&amp;</td><td>앰퍼샌드</td></tr>
+        <tr><td>&amp;quot;</td><td>&quot;</td><td>큰따옴표</td></tr>
+        <tr><td>&amp;apos;</td><td>&apos;</td><td>작은따옴표</td></tr>
+        <tr><td>&amp;copy;</td><td>&copy;</td><td>저작권</td></tr>
+        <tr><td>&amp;reg;</td><td>&reg;</td><td>등록 상표</td></tr>
+        <tr><td>&amp;trade;</td><td>&trade;</td><td>상표</td></tr>
+        <tr><td>&amp;cent;</td><td>&cent;</td><td>센트</td></tr>
+        <tr><td>&amp;euro;</td><td>&euro;</td><td>유로</td></tr>
+        <tr><td>&amp;yen;</td><td>&yen;</td><td>엔</td></tr>
+        <tr><td>&amp;rarr;</td><td>&rarr;</td><td>오른쪽 화살표</td></tr>
+        <tr><td>&amp;hearts;</td><td>&hearts;</td><td>하트</td></tr>
+    </table>
+    <p>예) &lt;p&gt; 태그는 문단을 만듭니다. &copy; 2025 My Web</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex3-6-specialChar.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap3html.html">← 3장 목록</a></memo-bar>
+</body>
+</html>

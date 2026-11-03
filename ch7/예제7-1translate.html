@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+=========================================
+CSS Transform(2D 변형) 핵심 요약
+=========================================
+
+■ transform
+- HTML 요소에 2D/3D 변형 적용
+- 이동, 회전, 확대/축소, 기울이기 가능
+
+■ transform-origin
+- 변형의 기준점(중심) 설정
+
+■ 주요 메소드
+- translate(x,y) : x, y축 이동
+- translateX(n)  : x축 이동
+- translateY(n)  : y축 이동
+- scale(x,y)     : 크기 확대/축소
+- scaleX(n)      : x축 크기 변경
+- scaleY(n)      : y축 크기 변경
+- rotate(angle)  : 지정 각도만큼 회전
+- skew(x,y)      : x, y축 기울이기
+- skewX(angle)   : x축 기울이기
+- skewY(angle)   : y축 기울이기
+- matrix(...)    : 행렬을 이용한 복합 변형
+
+※ 핵심
+- translate : 이동
+- rotate    : 회전
+- scale     : 확대/축소
+- skew      : 기울이기
+- transform-origin : 변형 기준점 설정
+-->
+<html>
+<head>
+    <title>예제7-1 translate</title> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <!-- 외부 CSS 파일 연결 -->
+    <link type="text/css" rel="stylesheet" href="css/color.css">
+    <style> 
+        /* translate(X, Y): X축과 Y축으로 동시에 이동 */
+        div#trnsXY {
+            width: 150px;
+            height: 80px;
+            background-color: red;              /* 빨강 박스 */
+            transform: translate(100px, 200px); /* 오른쪽 100px, 아래쪽 200px 이동 */
+        }
+
+        /* translateX(): X축으로만 이동 */
+        div#trnsX {
+            width: 150px;
+            height: 80px;
+            background-color: green;            /* 초록 박스 */
+            transform: translateX(150px);       /* 오른쪽으로 150px 이동 */
+        }
+
+        /* translateY(): Y축으로만 이동 */
+        div#trnsY {
+            width: 150px;
+            height: 80px;
+            background-color: blue;             /* 파랑 박스 */
+            transform: translateY(-50px);       /* 위쪽으로 50px 이동 (음수 값) */
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform - translate()</h1>
+
+    <!-- X축 100px, Y축 200px 이동 -->
+    <div id="trnsXY">translate(100px, 200px)</div><br>
+
+    <!-- X축 150px 이동 -->
+    <div id="trnsX">translateX(150px)</div><br>
+
+    <!-- Y축 -50px 이동 -->
+    <div id="trnsY">translateY(-50px)</div>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">예제7-1translate.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap7Animation.html">← 7장 목록</a></memo-bar>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

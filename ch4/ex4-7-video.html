@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4-7 비디오</title>
+    <style>
+        video { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <h2>video 태그</h2>
+    <video width="480" controls poster="../images/sample.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        이 브라우저는 video 태그를 지원하지 않습니다.
+    </video>
+
+    <h2>자동 재생 (muted가 있어야 동작)</h2>
+    <video width="320" autoplay muted loop playsinline>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    </video>
+
+    <h2>YouTube 영상 넣기</h2>
+    <p>YouTube의 <b>공유 &rarr; 퍼가기</b>에서 복사한 iframe 코드를 붙여 넣습니다.</p>
+    <iframe width="480" height="270" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video" allowfullscreen style="max-width: 100%;"></iframe>
+    <p><small>비디오 출처: MDN 예제 (CC0)</small></p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex4-7-video.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap4multi.html">← 4장 목록</a></memo-bar>
+</body>
+</html>

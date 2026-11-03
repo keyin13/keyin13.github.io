@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4-4 select와 textarea</title>
+</head>
+<body>
+    <form action="#">
+        <h2>select : 드롭다운 목록</h2>
+        <select name="city">
+            <option value="">-- 지역 선택 --</option>
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value="daegu" selected>대구</option>
+        </select>
+
+        <h2>optgroup : 항목 묶기</h2>
+        <select name="food">
+            <optgroup label="한식">
+                <option>비빔밥</option>
+                <option>김치찌개</option>
+            </optgroup>
+            <optgroup label="양식">
+                <option>파스타</option>
+                <option>피자</option>
+            </optgroup>
+        </select>
+
+        <h2>size와 multiple : 목록 상자, 여러 개 선택</h2>
+        <select name="lang" size="4" multiple>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+        </select>
+        <p><small>Ctrl을 누른 채 클릭하면 여러 개를 선택합니다.</small></p>
+
+        <h2>datalist : 자동 완성 목록</h2>
+        <input list="browsers" placeholder="브라우저 입력">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Safari">
+        </datalist>
+
+        <h2>textarea : 여러 줄 입력</h2>
+        <textarea name="memo" rows="5" cols="40" placeholder="자기소개를 입력하세요"></textarea>
+
+        <p><input type="submit" value="보내기"></p>
+    </form>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex4-4-select.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap4multi.html">← 4장 목록</a></memo-bar>
+</body>
+</html>

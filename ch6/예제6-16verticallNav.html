@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 문서 제목과 문자 인코딩 설정 -->
+    <title>예제6-16 수직 메뉴</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* ul 태그 스타일
+           list-style-type: 불릿 제거
+           margin: 기본 바깥 여백 제거
+           padding: 기본 안쪽 여백 제거
+           width: 메뉴 전체 너비 200px */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+
+        /* li 안의 a 태그 스타일
+           display: block → 링크를 블록 요소로 만들어 세로 정렬
+           background-color: 메뉴 배경색 (짙은 남색 계열)
+           padding: 내부 여백 (위아래 8px, 좌우 16px)
+           color: 글자색 (밝은 회색)
+           text-decoration: none → 밑줄 제거 */
+        li a {
+            display: block;
+            background-color: #00000a;
+            padding: 8px 16px;
+            color: rgb(248, 246, 246);
+            text-decoration: none;
+        }
+
+        /* li 안의 a 태그에 마우스를 올렸을 때 효과
+           background-color: 배경색을 회색(#444444)으로 변경
+           color: 글자색을 흰색으로 변경 */
+        li a:hover {
+            background-color: #444444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 수직 메뉴 영역 -->
+    <!-- align="center": 메뉴를 가운데 정렬 -->
+    <ul align="center">
+        <!-- 각 메뉴 항목 -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">AI</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">CSS3</a></li>
+        <li><a href="#">javascript</a></li>
+    </ul>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">예제6-16verticallNav.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap6Dsgn.html">← 6장 목록</a></memo-bar>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

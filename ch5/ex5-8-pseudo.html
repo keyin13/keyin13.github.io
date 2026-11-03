@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 5-8 의사 클래스와 의사 요소</title>
+    <style>
+        /* 링크 상태 : 순서는 LoVe HAte (link, visited, hover, active) */
+        a:link { color: blue; }
+        a:visited { color: purple; }
+        a:hover { color: red; text-decoration: none; }
+        a:active { color: orange; }
+
+        button:hover { background: #007bff; color: white; }
+        input:focus { outline: 3px solid gold; }
+
+        /* 구조 의사 클래스 */
+        li:first-child { font-weight: bold; }
+        li:last-child { color: gray; }
+        tr:nth-child(even) { background: #eef; }
+        tr:nth-child(odd) { background: #fff; }
+
+        /* 의사 요소 */
+        .intro::first-letter { font-size: 2em; color: crimson; }
+        .intro::first-line { color: #333; }
+        .note::before { content: "※ "; color: red; }
+        .note::after { content: " (필독)"; color: gray; }
+        ::selection { background: #ffd54f; }
+    </style>
+</head>
+<body>
+    <h2>링크와 상태</h2>
+    <p><a href="#">마우스를 올리고 눌러 보세요</a></p>
+    <p><button>hover 버튼</button> <input placeholder="클릭하면 focus"></p>
+
+    <h2>구조 의사 클래스</h2>
+    <ul>
+        <li>첫 번째 (굵게)</li>
+        <li>두 번째</li>
+        <li>마지막 (회색)</li>
+    </ul>
+    <table border="1">
+        <tr><td>1행</td></tr><tr><td>2행</td></tr><tr><td>3행</td></tr><tr><td>4행</td></tr>
+    </table>
+
+    <h2>의사 요소</h2>
+    <p class="intro">첫 글자가 크게 보입니다. 이 문장은 ::first-letter와 ::first-line 예시입니다. 글자를 드래그하면 ::selection 색이 적용됩니다.</p>
+    <p class="note">과제는 금요일까지 제출합니다.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex5-8-pseudo.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap5CSS.html">← 5장 목록</a></memo-bar>
+</body>
+</html>

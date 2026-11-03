@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 3-8 셀 병합</title>
+</head>
+<body>
+    <h2>colspan : 가로 방향 병합</h2>
+    <table border="1">
+        <tr><th colspan="3">1학년 1반 성적</th></tr>
+        <tr><th>이름</th><th>국어</th><th>수학</th></tr>
+        <tr><td>김철수</td><td>90</td><td>85</td></tr>
+        <tr><td>이영희</td><td>95</td><td>92</td></tr>
+    </table>
+
+    <h2>rowspan : 세로 방향 병합</h2>
+    <table border="1">
+        <tr><th>분류</th><th>과일</th><th>가격</th></tr>
+        <tr><td rowspan="2">여름</td><td>수박</td><td>15,000원</td></tr>
+        <tr><td>참외</td><td>5,000원</td></tr>
+        <tr><td rowspan="2">가을</td><td>사과</td><td>3,000원</td></tr>
+        <tr><td>배</td><td>4,000원</td></tr>
+    </table>
+    <p>병합된 칸이 차지한 자리만큼 다음 행(또는 열)에서 td를 줄여야 합니다.</p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex3-8-tableSpan.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap3html.html">← 3장 목록</a></memo-bar>
+</body>
+</html>

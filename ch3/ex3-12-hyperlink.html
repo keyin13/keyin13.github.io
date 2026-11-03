@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 3-12 하이퍼링크</title>
+</head>
+<body>
+    <h1 id="top">하이퍼링크 (a 태그)</h1>
+
+    <h2>1. 외부 사이트</h2>
+    <p><a href="https://www.naver.com">네이버 (현재 창)</a></p>
+    <p><a href="https://www.google.com" target="_blank">구글 (새 창)</a></p>
+
+    <h2>2. 내부 문서</h2>
+    <p><a href="ex3-1-htmlFrame.html">예제 3-1로 이동</a></p>
+    <p><a href="../chap3html.html">3장 목록으로 (상위 폴더)</a></p>
+
+    <h2>3. 이메일 / 전화</h2>
+    <p><a href="mailto:someone@example.com">메일 보내기</a></p>
+    <p><a href="tel:010-1234-5678">전화 걸기 (모바일)</a></p>
+
+    <h2>4. 책갈피 (같은 페이지 안에서 이동)</h2>
+    <p><a href="#last">맨 아래로 이동</a></p>
+
+    <p style="height: 1200px;">(스크롤을 만들기 위한 빈 공간)</p>
+
+    <h2 id="last">맨 아래</h2>
+    <p><a href="#top">맨 위로 돌아가기</a></p>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex3-12-hyperlink.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap3html.html">← 3장 목록</a></memo-bar>
+</body>
+</html>

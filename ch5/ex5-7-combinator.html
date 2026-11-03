@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 5-7 결합 선택자와 우선순위</title>
+    <style>
+        /* 자손 선택자 (공백) : #wrap 안의 모든 p */
+        #wrap p { color: blue; }
+
+        /* 자식 선택자 (>) : #wrap 바로 아래의 span만 */
+        #wrap > span { background: yellow; }
+
+        /* 인접 형제 선택자 (+) : h3 바로 다음 p */
+        h3 + p { font-weight: bold; }
+
+        /* 일반 형제 선택자 (~) : h4 뒤의 모든 p */
+        h4 ~ p { text-decoration: underline; }
+
+        /* 속성 선택자 */
+        a[target="_blank"] { color: green; }
+
+        /* 우선순위 비교 : id(100) > class(10) > 태그(1) */
+        .item { color: orange; }
+        #special { color: crimson; }
+        li { color: gray; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>#wrap의 자손 p (파랑)</p>
+        <span>#wrap의 자식 span (노란 배경)</span>
+        <div><span>손자 span (배경 없음)</span></div>
+    </div>
+
+    <h3>h3 제목</h3>
+    <p>h3 바로 다음 p (굵게)</p>
+    <p>그 다음 p (보통)</p>
+
+    <h4>h4 제목</h4>
+    <p>h4 뒤의 p (밑줄)</p>
+    <p>h4 뒤의 p (밑줄)</p>
+
+    <p><a href="#">일반 링크</a> / <a href="#" target="_blank">새 창 링크 (초록)</a></p>
+
+    <h3>우선순위</h3>
+    <ul>
+        <li>태그 선택자만 (회색)</li>
+        <li class="item">class 적용 (주황)</li>
+        <li class="item" id="special">class + id 적용 &rarr; id가 이김 (진홍)</li>
+    </ul>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">ex5-7-combinator.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap5CSS.html">← 5장 목록</a></memo-bar>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- 
+<nav> 요소는 웹 사이트의 내비게이션 영역을 정의할 때 사용되며, 
+일반적으로 메뉴 목록이나 링크들을 포함
+사용자가 사이트 내 여러 페이지로 쉽게 이동할 수 있도록 하이퍼링크를 그룹화하는 용도로 활용
+
+=========================================
+반응형 웹(Responsive Web) 핵심 요약
+=========================================
+
+■ 콘텐츠 영역
+- HTML5에는 <content> 태그가 없음
+- 실제로는 <section>, <article>, <div> 등을 사용
+
+■ 미디어 쿼리(@media)
+- 화면 크기에 따라 다른 CSS 적용
+- 하나의 HTML로 다양한 기기 지원
+
+■ 스마트폰 레이아웃
+- 작은 화면에서는 콘텐츠를 한 줄에 하나씩 배치
+- width: 100% 사용
+
+예)
+@media screen and (max-width: 400px){
+    #content { width: 100%; }
+}
+
+※ 핵심
+- <content>는 표준 태그가 아님
+- 반응형 웹은 @media를 사용하여 구현
+- 작은 화면에서는 콘텐츠를 세로로 배치
+-->
+<html lang="ko">
+<head>
+    <!-- 문서 제목과 문자 인코딩 설정 -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/memo.css">
+    <title>예제6-14 navigation</title>
+
+    <!-- 외부 CSS 파일(color.css) 연결 -->
+    <link rel="stylesheet" href="css/color.css" />
+
+    <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style> 
+        /* navigation 영역 스타일 */
+        #nav {
+            overflow: hidden;              /* 내부 요소가 넘치지 않도록 처리 */
+            border-top: 2px solid blue;    /* 위쪽 파란색 테두리 */
+            border-bottom: 2px solid blue; /* 아래쪽 파란색 테두리 */
+            text-align: center;            /* 메뉴 항목 가운데 정렬 */
+            padding: 15px 0;               /* 위아래 여백 */
+            background: #f9f9f9;           /* 배경색 밝은 회색 */
+        }
+
+        /* navigation 안의 링크 스타일 */
+        #nav a {
+            display: inline-block;         /* 가로로 나열되도록 블록화 */
+            padding: 10px 20px;            /* 내부 여백 (위아래 10px, 좌우 20px) */
+            text-align: center;            /* 텍스트 가운데 정렬 */
+            text-decoration: none;         /* 밑줄 제거 */
+            color: black;                  /* 글자색 검정 */
+            transition: color 0.3s, font-weight 0.3s; /* hover 시 부드럽게 변화 */
+        }
+
+        /* 링크에 마우스를 올리거나 포커스했을 때 효과 */
+        #nav a:hover, #nav a:focus {
+            font-weight: bold;             /* 글자 굵게 */
+            color: red;                    /* 글자색 빨강 */
+            outline: none;                 /* 포커스 테두리 제거 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 내비게이션 영역 -->
+    <!-- aria-label: 접근성 향상, 스크린리더에서 '주요 내비게이션'으로 인식 -->
+    <nav id="nav" aria-label="주요 내비게이션">
+        <!-- 각 메뉴 항목 -->
+        <a href="#">AI</a>
+        <a href="#">HTML5</a>
+        <a href="#">CSS3</a>
+    </nav>
+    <memo-bar id="memo-bar"><span class="mb-app">📝 메모장</span><span class="mb-file">예제6-14navigation.html</span><span class="mb-info">UTF-8</span><a class="mb-back" href="../chap6Dsgn.html">← 6장 목록</a></memo-bar>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
