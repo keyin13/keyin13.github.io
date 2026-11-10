@@ -3,115 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 비서와 함께하는 웹호스팅</title>
+    <title>keyin13.log · 웹 연습장</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/notebook.css">
 </head>
 <body>
     <header class="topbar">
-        <a class="logo" href="index.html">✎ 웹 공부 노트</a>
+        <a class="logo" href="index.html">✎ keyin13.log</a>
         <nav>
-            <a href="#notes">수업 노트</a>
-            <a href="#about">소개</a>
+            <a href="#log">수업 노트</a>
+            <a href="https://github.com/keyin13/keyin13.github.io">GitHub</a>
         </nav>
     </header>
 
-    <section class="hero" id="about">
+    <section class="hero">
         <div class="hero-text">
-            <p class="kicker">Study Note · Web Programming</p>
-            <h1>AI 비서와 함께하는<br><span class="highlight">웹호스팅</span> 공부 노트</h1>
-            <p class="lead">HTML 한 줄부터 DOM 이벤트까지,<br>수업 시간에 배운 내용을 한 장씩 정리하고 있어요.</p>
+            <p class="kicker">2026 가을학기 · 웹프로그래밍</p>
+            <h1>코드 한 줄씩,<br><span class="highlight">내 손으로</span> 쌓는 웹</h1>
+            <p class="lead">수업 시간에 직접 따라 친 예제를 챕터별로 모아 둔 연습장이에요.<br>모든 예제는 눌러서 바로 실행해 볼 수 있어요.</p>
             <div class="hero-btns">
-                <a class="btn btn-ink" href="#notes">노트 펼치기 →</a>
+                <a class="btn btn-ink" href="#log">노트 펼치기 →</a>
                 <a class="btn btn-line" href="chap3html.html">처음부터 보기</a>
+            </div>
+
+            <!-- 방문자 카운터 포스트잇 -->
+            <div class="counter note yellow">
+                <span class="ch">VISITORS</span>
+                <p class="counter-num"><b id="visit-count">···</b> 명</p>
+                <p class="counter-label">지금까지 이 노트를 펼쳐 본 사람 👀</p>
             </div>
         </div>
 
-        <!-- 스프링 노트 목차 -->
-        <aside class="toc">
-            <div class="spiral" aria-hidden="true"></div>
-            <h2>목차</h2>
-            <ol>
-                <li><a href="chap3html.html"><span>HTML 기본 문법</span><i></i><b>Ch.3</b></a></li>
-                <li><a href="chap4multi.html"><span>입력 양식과 멀티미디어</span><i></i><b>Ch.4</b></a></li>
-                <li><a href="chap5CSS.html"><span>CSS 기본 문법</span><i></i><b>Ch.5</b></a></li>
-                <li><a href="chap6Dsgn.html"><span>CSS 디자인</span><i></i><b>Ch.6</b></a></li>
-                <li><a href="chap7Animation.html"><span>애니메이션</span><i></i><b>Ch.7</b></a></li>
-                <li><a href="chap8javascript.html"><span>JavaScript 기본 문법</span><i></i><b>Ch.8</b></a></li>
-                <li><a href="chap9jsObj.html"><span>JavaScript 객체</span><i></i><b>Ch.9</b></a></li>
-                <li><a href="chap10event.html"><span>DOM과 이벤트</span><i></i><b>Ch.10</b></a></li>
-            </ol>
-            <p class="memo">✓ 8개 챕터 정리 완료!</p>
-        </aside>
+        <!-- 나를 소개하는 코드 카드 -->
+        <div class="code-card">
+            <div class="code-bar"><i></i><i></i><i></i><span>me.js</span></div>
+<pre><code><b>const</b> me = {
+  semester: <s>"2026-2"</s>,
+  learned: [<s>"HTML"</s>, <s>"CSS"</s>, <s>"JS"</s>],
+  examples: <u>110</u>,
+  next: <s>"내 사이트 만들기"</s>
+};</code></pre>
+            <ul class="stats">
+                <li><strong>3</strong>파트</li>
+                <li><strong>8</strong>챕터</li>
+                <li><strong>110</strong>예제</li>
+            </ul>
+        </div>
     </section>
 
-    <main id="notes">
+    <main id="log">
         <h2 class="section-title"><span class="num">01.</span> 수업 노트</h2>
 
         <div class="notes">
             <a class="note yellow" href="chap3html.html">
                 <span class="ch">CH.03</span>
                 <h3>HTML 기본 문법</h3>
-                <p>웹 페이지의 뼈대인 HTML 문서 구조와 텍스트·표·이미지·링크 태그를 익힙니다.</p>
+                <p>태그로 페이지의 뼈대를 세워요. 제목·문단·표·이미지·링크까지 웹의 기본 재료를 하나씩 써 봤어요.</p>
                 <span class="tags">table · img · a</span>
             </a>
 
             <a class="note pink" href="chap4multi.html">
                 <span class="ch">CH.04</span>
                 <h3>입력 양식과 멀티미디어</h3>
-                <p>form과 input으로 사용자 입력을 받고, 오디오·비디오·iframe을 웹 페이지에 넣는 방법을 알아봅니다.</p>
+                <p>사용자한테 입력을 받는 법. 텍스트 칸, 버튼, 선택지 같은 폼 요소와 영상·소리 넣기.</p>
                 <span class="tags">form · input · video</span>
             </a>
 
             <a class="note mint" href="chap5CSS.html">
                 <span class="ch">CH.05</span>
                 <h3>CSS 기본 문법</h3>
-                <p>스타일시트 적용 방법과 선택자, 폰트·색상·경계선·그림자 등 CSS의 핵심 속성을 익힙니다.</p>
+                <p>같은 HTML도 스타일을 입히면 완전히 달라져요. 선택자로 고르고 글꼴·색·테두리·그림자 입히기.</p>
                 <span class="tags">selector · font · shadow</span>
             </a>
 
             <a class="note blue" href="chap6Dsgn.html">
                 <span class="ch">CH.06</span>
                 <h3>CSS 디자인</h3>
-                <p>display, position, float 등 레이아웃 속성과 헤더·내비게이션·드롭다운 메뉴 만들기를 다룹니다.</p>
+                <p>요소를 원하는 자리에 놓는 법. 레이아웃을 잡고 내비게이션 메뉴를 직접 만들어 봤어요.</p>
                 <span class="tags">display · position · float</span>
             </a>
 
             <a class="note peach" href="chap7Animation.html">
                 <span class="ch">CH.07</span>
                 <h3>애니메이션</h3>
-                <p>transform, transition, @keyframes로 요소를 움직이고 변화시키는 방법을 배웁니다.</p>
+                <p>멈춰 있던 화면에 움직임 주기. 돌리고, 부드럽게 바꾸고, 반복해서 움직이게.</p>
                 <span class="tags">transform · transition · keyframes</span>
             </a>
 
             <a class="note lavender" href="chap8javascript.html">
                 <span class="ch">CH.08</span>
                 <h3>JavaScript 기본 문법</h3>
-                <p>변수, 연산자, 함수, 조건문, 반복문 등 JavaScript의 기본 문법을 학습합니다.</p>
+                <p>이제 페이지가 생각을 해요. 변수·조건문·반복문·함수로 동작을 만들어 보기.</p>
                 <span class="tags">let · function · if · for</span>
             </a>
 
             <a class="note yellow" href="chap9jsObj.html">
                 <span class="ch">CH.09</span>
                 <h3>JavaScript 객체</h3>
-                <p>사용자 정의 객체와 String, Number, Math, Date, Array 내장 객체를 활용합니다.</p>
+                <p>자바스크립트가 기본으로 주는 도구 상자. 문자열·숫자·날짜·배열 다루기와 나만의 객체 만들기.</p>
                 <span class="tags">String · Math · Date · Array</span>
             </a>
 
             <a class="note mint" href="chap10event.html">
                 <span class="ch">CH.10</span>
                 <h3>DOM과 이벤트</h3>
-                <p>DOM으로 문서를 조작하고, 클릭·마우스·키보드 등 사용자 이벤트와 브라우저 객체를 다룹니다.</p>
+                <p>클릭하면 바뀌는 페이지. 요소를 찾아서 고치고, 마우스·키보드에 반응하게 만들기.</p>
                 <span class="tags">DOM · event · window</span>
             </a>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 AI 비서와 함께하는 웹호스팅</p>
-        <p class="sign">— 오늘도 한 장 더 ✎</p>
+        <p>&copy; 2026 keyin13</p>
+        <p class="sign">— 오늘도 한 줄 더 쳐보기 ✎</p>
     </footer>
+
+    <script>
+        // 방문자 카운터: 무료 카운터 API(Abacus)에 숫자를 저장
+        // 같은 탭에서 새로고침할 때는 다시 세지 않고, 내 컴퓨터에서 파일로 열 때도 세지 않음
+        (function () {
+            var api = "https://abacus.jasoncameron.dev";
+            var key = "keyin13-github-io/visits";
+            var counted = false;
+            try { counted = sessionStorage.getItem("visited") === "1"; } catch (e) {}
+            var mode = (counted || location.protocol === "file:") ? "get" : "hit";
+            var el = document.getElementById("visit-count");
+
+            fetch(api + "/" + mode + "/" + key)
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    var total = data.value || 0;
+                    if (mode === "hit") {
+                        try { sessionStorage.setItem("visited", "1"); } catch (e) {}
+                    }
+                    // 0부터 숫자가 올라가는 효과
+                    var start = null;
+                    function step(t) {
+                        if (!start) start = t;
+                        var p = Math.min((t - start) / 900, 1);
+                        el.textContent = Math.round(total * p).toLocaleString();
+                        if (p < 1) requestAnimationFrame(step);
+                    }
+                    requestAnimationFrame(step);
+                })
+                .catch(function () { el.textContent = "?"; });
+        })();
+    </script>
 </body>
 </html>
